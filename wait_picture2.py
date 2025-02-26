@@ -5,8 +5,10 @@ from selenium.webdriver.support import expected_conditions as EC
 
 driver = webdriver.Chrome()
 
-driver.get("https://bonigarcia.dev/selenium-webdriver-java/loading-images.html")
-
+url = (
+    "https://bonigarcia.dev/selenium-webdriver-java/loading-images.html"
+)
+driver.get(url)
 third_image = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located(
                 (By.CSS_SELECTOR, "#image-container img:nth-child(3)"))
